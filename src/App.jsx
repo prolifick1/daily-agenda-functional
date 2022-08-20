@@ -111,8 +111,8 @@ function App() {
             <MDBCol md="3">
                 <h3 className="text-uppercase my-3">Schedule</h3>
                 <h6 className="my-3">
-                It is going to be busy that today. You have{" "}
-                <b>{events.length} events </b> today.
+                It is going to be busy today. You have{" "}
+                <b>{events.length} events </b>.
                 </h6>
                 <h1 className="my-3">
                     <MDBRow>
@@ -129,9 +129,9 @@ function App() {
                     </MDBRow>
                 </h1>
                 <p>
-                Don't forget your sunglasses. Today will dry and sunny, becoming
-                warm in the afternoon with temperatures of between 20 and 25
-                degrees.
+                Don't forget your rain jacket. Today will warm and humid, becoming
+                warm in the afternoon with temperatures between 65 and 73
+                degrees F in Chicago.
                 </p>
             </MDBCol>
             </MDBRow>
@@ -153,6 +153,8 @@ function App() {
                       hint="12:30"
                       group
                       type="text"
+                      value={time}
+                      onChange={(e) => setTime(e.target.value)}
                     />
                     <MDBInput
                       name="title"
@@ -161,6 +163,8 @@ function App() {
                       hint="Briefing"
                       group
                       type="text"
+                      value={title}
+                      onChange={(e) => setTitle(e.target.value)}
                     />
                     <MDBInput
                       name="location"
@@ -168,6 +172,8 @@ function App() {
                       icon="map"
                       group
                       type="text"
+                      value={location}
+                      onChange={(e) => setLocation(e.target.value)}
                     />
                     <MDBInput
                       name="description"
@@ -175,6 +181,8 @@ function App() {
                       icon="sticky-note"
                       group
                       type="textarea"
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
                     />
                   </form>
             </MDBModalBody>
